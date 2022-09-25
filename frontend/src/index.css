@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: var(--body-color);
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--gray-color2);
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--salmon-color);
+  border-radius: 20px;
+}
+
+.shrunk {
+  padding: 10px 5% !important;
+  top: 0 !important;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+.shrunk-h3 {
+  font-size: 1.5rem;
+}
+
+.shrunk-icons {
+  font-size: 1.3rem;
+}
+
+.parallax { 
+  background-image: url("./assets/images/parallax-image.jpg");
+  position: relative;
+  height: 560px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+:root {
+  --body-color: #f3f4f3;
+  --black-color: #000000;
+  --dark-color: #1e1e1e;
+  --dark-color2: #363636;
+  --light-pink: #f2ece7;
+  --gray-color: #707070;
+  --gray-color2: #dddddd;
+  --white-color: #ffffff;
+  --green-color: #16b36e;
+  --red-color: #ed1212;
+  --salmon-color: #f57250;
+  --light_gray-color: #eff1f2;
+  --transition: all 0.3s ease;
+}
+
+.fade-in {
+  -webkit-animation: fade-in 0.5s both;
+  animation: fade-in 0.5s both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
