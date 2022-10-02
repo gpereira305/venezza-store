@@ -1,0 +1,20 @@
+.store__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 150px;
+  text-align: center;
+}
+
+.store__section h2 {
+  text-transform: uppercase;
+  color: var(--salmon-color);
+  font-size: 0.7rem;
+  line-height: 30px;
+}
+
+.store__section h3 {
+  font-weight: 300;
+  color: var(--black-color);
+}

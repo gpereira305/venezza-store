@@ -1,8 +1,10 @@
+import HomePage from "./screens/HomePage";
+
  
 function App() {
   return (
     <> 
-       <h1>Veneza</h1>
+       <HomePage/>
     </>
   );
 }
