@@ -115,7 +115,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 992px) {
   .store__container {
     max-width: 660px;
     padding: 0 20px;

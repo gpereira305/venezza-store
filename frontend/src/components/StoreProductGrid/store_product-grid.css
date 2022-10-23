@@ -1,0 +1,147 @@
+.store__grid-container {
+  background-color: blueviolet;
+}
+
+.store__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px 20px;
+}
+
+.store__grid--item {
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+  max-height: 70vh;
+}
+
+.store__grid--item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgb(0 0 0 / 60%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.store__grid--item:hover.store__grid--item::after {
+  opacity: 1;
+}
+
+.store__grid--item > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--green-color);
+  line-height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.2em;
+}
+
+.store__grid--price {
+  position: absolute;
+  top: -13px;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1rem;
+  color: var(--black-color);
+  transition: var(--transition);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.store__grid--item:hover .store__grid--price {
+  color: var(--white-color);
+  z-index: 1;
+  top: 20px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.store__item--img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.store__item--title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1rem;
+  color: var(--black-color);
+  transition: var(--transition);
+}
+
+.store__grid--item:hover .store__item--title {
+  color: var(--white-color);
+  z-index: 1;
+}
+
+.store__item--icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 40px;
+  transition: var(--transition);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.store__grid--item:hover .store__item--icons {
+  bottom: 25%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.store__item--icons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.store__item--icons span img {
+  width: 25px;
+}
+
+@media (max-width: 992px) {
+  .store__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .store__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .store__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,23 +1,19 @@
 .store__header {
-  min-height: 50px;
-  background-color: var(--black-color);
   width: 100%;
   position: relative;
   display: flex;
-  margin-bottom: 30px;
   align-items: center;
 }
 
 .store__navbar {
   color: var(--white-color);
-  background-color: var(--black-color);
   width: 100%;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
   transition: var(--transition);
-  padding: 15px 0px;
+  padding: 10px 0px;
   z-index: 10;
 }
 
@@ -25,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 50px;
+  min-height: 40px;
   transition: var(--transition);
 }
 
@@ -35,6 +31,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
+  color: var(--black-color);
 }
 
 .store__navbar--nav ul {
@@ -47,6 +44,7 @@
   transition: var(--transition);
   position: relative;
   cursor: pointer;
+  color: var(--black-color);
 }
 
 .store__navbar--nav li::after {
@@ -65,17 +63,15 @@
   opacity: 1;
 }
 
-.newbackground {
+.store__sticky-header {
   transition: var(--transition);
-  padding: 0px;
 }
 
-.newbackground .store__navbar--logo {
-  font-size: 1.5rem;
-}
-
-.newbackground .store__navbar--nav li {
-  font-size: 0.85rem;
+.store__sticky-header.store__navbar {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: rgb(245 114 80 / 30%);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .store__hamburger {

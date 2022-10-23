@@ -8,14 +8,14 @@ const StoreHeader = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
-        setSmall(window.pageYOffset > 100)
+        setSmall(window.pageYOffset > 60)
       );
     }
   }, []);
 
   return (
     <header className="store__header">
-      <div className={`store__navbar ${small ? "newbackground" : ""}`}>
+      <div className={`store__navbar ${small ? "store__sticky-header" : ""}`}>
         <div className="store__container">
           <span className="store__navbar--logo" title="Logo">
             Venezza
