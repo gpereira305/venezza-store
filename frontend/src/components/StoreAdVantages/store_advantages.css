@@ -1,0 +1,64 @@
+.store__advantages {
+  background-color: var(--black-color);
+  padding: 50px 0;
+}
+
+.store__advantages--container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 820px;
+  margin: auto;
+}
+
+.store__advantages--card-body {
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.store__advantages--card-body img {
+  margin-bottom: 5px;
+  width: 40px;
+}
+
+.store__card-body--title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.store__card-body--content {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+/*
+* ----------------------
+*    breakpoints
+* ---------------------- 
+*/
+@media (max-width: 992px) {
+  .store__card-body--title {
+    font-size: 1rem;
+  }
+
+  .store__advantages--container {
+    max-width: 660px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .store__advantages--container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+  .store__advantages--container {
+    justify-content: center;
+  }
+}

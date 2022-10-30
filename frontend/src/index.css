@@ -35,6 +35,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
+img {
+  display: block;
+}
+
 .store__container {
   max-width: 1240px;
   margin: 0 auto;

@@ -1,0 +1,39 @@
+.store__blog--body {
+  transition: var(--transition);
+}
+
+.store__blog--body:hover {
+  transform: translateY(-8px);
+}
+
+.store__body--image {
+  margin-bottom: 5px;
+}
+
+.store__body--image img {
+  width: 100%;
+}
+
+.store__body--title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 22px;
+  color: var(--black-color);
+}
+
+.store__body--content {
+  font-size: 0.8rem;
+  line-height: 20px;
+  font-weight: 400;
+  border-bottom: 1.5px solid var(--gray-color2);
+  padding-bottom: 10px;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+}
+.store__body--date {
+  font-size: 0.6rem;
+  font-style: italic;
+  line-height: 15px;
+  color: var(--dark-color);
+}
