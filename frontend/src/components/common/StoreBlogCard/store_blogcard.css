@@ -1,4 +1,13 @@
-.store__blog--body {
+.store__blog-container:hover .store__blog--body:not(:hover) {
+  filter: grayscale();
+}
+
+.store__blog-container:hover .store__blog--body:not(:hover)::after {
+  background-color: rgba(var(--black-color), 0.2);
+}
+
+.store__blog--body,
+.store__body--image img {
   transition: var(--transition);
 }
 
@@ -12,6 +21,11 @@
 
 .store__body--image img {
   width: 100%;
+}
+
+.store__body--image:hover img {
+  filter: none;
+  cursor: pointer;
 }
 
 .store__body--title {
