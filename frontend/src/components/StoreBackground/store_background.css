@@ -1,0 +1,50 @@
+.store__background {
+  background-image: url("../../assets/images/parallax-image.jpg");
+  position: relative;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.store__background::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0 0 0 / 50%);
+}
+
+.store__background--cta {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  bottom: 45%;
+  z-index: 10;
+}
+
+.store__background--cta h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--white-color);
+  line-height: 40px;
+}
+
+.store__background--cta .store__button-one {
+  background-color: transparent;
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.store__background--cta .store__button-one:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}

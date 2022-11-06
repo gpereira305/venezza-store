@@ -5,6 +5,7 @@ import StoreSections from "../common/StoreSections";
 import StoreProductGrid from "../StoreProductGrid";
 import StoreBlog from "../StoreBlog";
 import StoreAdvantages from "../StoreAdVantages";
+import StoreBackground from "../StoreBackground";
 
 const index = () => {
   return (
@@ -18,6 +19,26 @@ const index = () => {
       />
       <StoreBlog />
       <StoreAdvantages />
+      <StoreBackground />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </main>
   );
 };
