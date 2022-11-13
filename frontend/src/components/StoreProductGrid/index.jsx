@@ -9,9 +9,9 @@ const index = () => {
   return (
     <div className="store__grid-container">
       <div className="store__grid store__container">
-        {products.map((product, index) => (
+        {products.map((product, i) => (
           <StoreProductCard
-            key={index}
+            key={i}
             productImage={product.img}
             productPrice={product.price}
             productName={product.name}

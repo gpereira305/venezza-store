@@ -3,7 +3,7 @@ import "./store_blogcard.css";
 
 const index = ({ post }) => {
   return (
-    <article className="store__blog--body" key={post.id}>
+    <article className="store__blog--body">
       <figure className="store__body--image">
         <img src={post.img} alt="User" />
       </figure>

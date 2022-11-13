@@ -20,25 +20,6 @@ const index = () => {
       <StoreBlog />
       <StoreAdvantages />
       <StoreBackground />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </main>
   );
 };

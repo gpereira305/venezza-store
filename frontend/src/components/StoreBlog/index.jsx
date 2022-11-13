@@ -7,8 +7,8 @@ const index = () => {
   return (
     <div className="store__blog">
       <div className="store__blog-container store__container">
-        {blogposts.map((post) => (
-          <StoreBlogCard post={post} />
+        {blogposts.map((post, i) => (
+          <StoreBlogCard post={post} key={i} />
         ))}
       </div>
     </div>

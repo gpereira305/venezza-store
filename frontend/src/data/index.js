@@ -89,6 +89,34 @@ export const blogposts = [
   },
 ];
 
+export const socials = [
+  {
+    link: "https://www.facebook.com",
+    name: "fa-brands fa-facebook-f",
+    title: "Facebook",
+  },
+  {
+    link: "https://www.instagram.com",
+    name: "fa-brands fa-instagram",
+    title: "Instagram",
+  },
+  {
+    link: "https://www.pinterest.com",
+    name: "fa-brands fa-pinterest-p",
+    title: "Pinterest",
+  },
+  {
+    link: "https://www.youtube.com",
+    name: "fa-brands fa-youtube",
+    title: "Youtube",
+  },
+  {
+    link: "https://www.linkedin.com",
+    name: "fa-brands fa-linkedin-in",
+    title: "Linkedin",
+  },
+];
+
 export const instaposts = [
   { img: instagramPost1, id: 1 },
   { img: instagramPost2, id: 2 },

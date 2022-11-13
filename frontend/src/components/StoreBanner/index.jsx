@@ -5,7 +5,7 @@ import StoreButtonOne from "../common/StoreButtons/StoreButtonOne";
 const index = () => {
   return (
     <div className="store__main-banner">
-      <img src={mainBanner} alt="" />
+      <img src={mainBanner} alt="banner" />
       <div className="store__main-banner--title">
         <span className="store__container">
           <h1>Nova Coleção de verão</h1>

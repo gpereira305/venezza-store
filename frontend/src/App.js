@@ -1,10 +1,13 @@
-import HomePage from "./screens/HomePage";
+import StoreHeader from "./components/StoreHeader";
+import StoreMain from "./components/StoreMain";
+import StoreFooter from "./components/StoreFooter";
 
- 
 function App() {
   return (
-    <> 
-       <HomePage/>
+    <>
+      <StoreHeader />
+      <StoreMain />
+      <StoreFooter />
     </>
   );
 }
