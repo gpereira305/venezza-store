@@ -1,0 +1,19 @@
+.store__info--social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 230px;
+}
+
+.store__info--social-links a {
+  font-size: 1.1rem;
+  color: var(--gray-color);
+  border: 2px solid var(--gray-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}

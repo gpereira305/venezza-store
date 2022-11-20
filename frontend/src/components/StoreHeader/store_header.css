@@ -15,6 +15,7 @@
   transition: var(--transition);
   padding: 10px 0px;
   z-index: 100;
+  background-color: var(--salmon-color);
 }
 
 .store__navbar .store__container {
@@ -55,8 +56,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--white-color);
-  transition: var(--transition);
+  background-color: var(--black-color);
 }
 
 .store__navbar--nav li:hover::after {

@@ -1,7 +1,8 @@
 import React from "react";
 import "./store_footer.css";
-import arrowRight from "../../assets/icons/arrow-small-right.svg";
-import { instaposts, socials } from "../../data";
+import paperAirplane from "../../assets/icons/paper-airplane.svg";
+import { instaposts } from "../../data";
+import StoreSocialMedia from "../common/StoreSocialMedia";
 
 // pega o ano atual
 const todayDate = new Date().getFullYear();
@@ -18,33 +19,28 @@ const index = () => {
             <input type="email" placeholder="Digite seu e-mail aqui..." />
             <button type="submit">
               inscrever-se
-              <img src={arrowRight} alt="Seta direita" />
+              <img src={paperAirplane} alt="Seta direita" />
             </button>
           </form>
 
           <h4>Acompanhe-nos em nossas redes sociais</h4>
-          <div className="store__info--social-links">
-            {socials.map((social, i) => (
-              <a
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={i}
-              >
-                <i className={social.name} title={social.title}></i>
-              </a>
-            ))}
-          </div>
+          <StoreSocialMedia />
         </div>
 
         <div className="store__footer--gallery">
           <h4>Siga no instagram:</h4>
           <div className="store__gallery--images">
-            {instaposts.map(({ img, i }) => (
-              <div className="store__images--img" key={i}>
+            {instaposts.map(({ img }, i) => (
+              <a
+                className="store__images--img"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                key={i}
+              >
                 <img src={img} alt="Post Instagram" />
                 <i className="fa-brands fa-instagram" title="Instagram"></i>
-              </div>
+              </a>
             ))}
           </div>
         </div>

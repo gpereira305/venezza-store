@@ -113,7 +113,7 @@
   visibility: visible;
 }
 
-.store__item--icons span {
+.store__item--icons a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,7 +124,7 @@
   z-index: 1;
 }
 
-.store__item--icons span img {
+.store__item--icons a img {
   width: 25px;
 }
 

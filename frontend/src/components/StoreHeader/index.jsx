@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./store_header.css";
 import hamburger from "../../assets/icons/burger.svg";
 
@@ -17,9 +18,9 @@ const StoreHeader = () => {
     <header className="store__header">
       <div className={`store__navbar ${small ? "store__sticky-header" : ""}`}>
         <div className="store__container">
-          <span className="store__navbar--logo" title="Logo">
+          <Link to={"/"} className="store__navbar--logo" title="Logo">
             Venezza
-          </span>
+          </Link>
           <nav className="store__navbar--nav">
             <ul>
               <li>Novidades</li>

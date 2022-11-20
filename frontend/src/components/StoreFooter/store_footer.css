@@ -52,7 +52,6 @@ footer {
 .store__info--newsletter button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border: none;
   text-transform: uppercase;
   padding: 9.5px;
@@ -64,8 +63,18 @@ footer {
   transition: var(--transition);
 }
 
+.store__info--newsletter button:hover {
+  color: var(--white-color);
+}
+
 .store__info--newsletter button img {
   width: 12px;
+  margin-left: 4px;
+  transition: var(--transition);
+}
+
+.store__info--newsletter button:hover img {
+  margin-left: 8px;
 }
 
 .store__footer--info h4 {
@@ -76,27 +85,7 @@ footer {
   line-height: 36px;
 }
 
-.store__info--social-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 230px;
-}
-
-.store__info--social-links a {
-  font-size: 1.1rem;
-  color: var(--gray-color);
-  border: 2px solid var(--gray-color);
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.store__info--social-links a:hover {
+.store__footer--info .store__info--social-links a:hover {
   color: var(--white-color);
   border: 2px solid var(--white-color);
 }

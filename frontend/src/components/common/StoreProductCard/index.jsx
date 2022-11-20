@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const index = ({
   productImage,
@@ -15,12 +16,12 @@ const index = ({
       <p className="store__item--title">{productName}</p>
 
       <div className="store__item--icons">
-        <span>
+        <Link to={""}>
           <img src={bagIcon} alt="Sacola" title="Carrinho" />
-        </span>
-        <span>
+        </Link>
+        <Link to={"/product-details"}>
           <img src={eyeIcon} alt="olho" title="Espiar" />
-        </span>
+        </Link>
       </div>
     </article>
   );

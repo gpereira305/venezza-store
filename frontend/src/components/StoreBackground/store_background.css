@@ -3,7 +3,7 @@
   position: relative;
   height: 500px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: inherit;
   background-attachment: fixed;
   background-size: cover;
 }
