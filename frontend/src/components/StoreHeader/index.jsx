@@ -26,7 +26,9 @@ const StoreHeader = () => {
               <li>Novidades</li>
               <li>Promoções</li>
               <li>Blog</li>
-              <li>Login</li>
+              <li>
+                <Link to={"/login"}>Login</Link>
+              </li>
               <li>Carrinho</li>
             </ul>
             <img className="store__hamburger" src={hamburger} alt="hamburger" />

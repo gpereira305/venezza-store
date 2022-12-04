@@ -7,6 +7,7 @@ const index = ({
   productName,
   bagIcon,
   eyeIcon,
+  id,
 }) => {
   return (
     <article className="store__grid--item">
@@ -19,7 +20,7 @@ const index = ({
         <Link to={""}>
           <img src={bagIcon} alt="Sacola" title="Carrinho" />
         </Link>
-        <Link to={"/product-details"}>
+        <Link to={`/product/${id}`}>
           <img src={eyeIcon} alt="olho" title="Espiar" />
         </Link>
       </div>

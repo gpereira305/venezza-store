@@ -15,6 +15,7 @@ const index = () => {
             productImage={product.img}
             productPrice={product.price}
             productName={product.name}
+            id={product._id}
             bagIcon={shoppingbag}
             eyeIcon={quicklook}
           />

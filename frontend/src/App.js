@@ -3,6 +3,8 @@ import StoreHeader from "./components/StoreHeader";
 import StoreFooter from "./components/StoreFooter";
 import StoreHomepage from "./screens/StoreHomepage";
 import StoreDetailspage from "./screens/StoreDetailspage";
+import StoreLogin from "./components/StoreLogin";
+import StoreRegister from "./components/StoreRegister";
 import StoreNotfound from "./screens/StoreNotfound";
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
       <StoreHeader />
       <Routes>
         <Route exact path={"/"} element={<StoreHomepage />} />
-        <Route exact path={"/product-details"} element={<StoreDetailspage />} />
+        <Route exact path={"/product/:id"} element={<StoreDetailspage />} />
+        <Route exact path={"/login"} element={<StoreLogin />} />
+        <Route exact path={"/register"} element={<StoreRegister />} />
         <Route path="*" element={<StoreNotfound />} />
       </Routes>
       <StoreFooter />

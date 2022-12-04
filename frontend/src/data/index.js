@@ -37,21 +37,110 @@ import instagramPost11 from "../assets/images/instagram-post11.jpg";
 import instagramPost12 from "../assets/images/instagram-post12.jpg";
 
 export const products = [
-  { img: image1, name: "Blusa Zapda", price: "19.99", _id: 1 },
-  { img: image2, name: "Blusa Daltex", price: "29.99", _id: 2 },
-  { img: image3, name: "Blusa Dentoex", price: "19.99", _id: 3 },
-  { img: image4, name: "Blusa Newity", price: "22.99", _id: 4 },
-  { img: image5, name: "Blusa Dentotam", price: "25.99", _id: 5 },
-  { img: image6, name: "Blusa Fixair", price: "19.99", _id: 6 },
-  { img: image7, name: "Blusa Lexywarm", price: "29.99", _id: 7 },
-  { img: image8, name: "Regata Emotion", price: "59.99", _id: 8 },
-  //   { img: image9, name: "Blusa Donkix", price: "79.99", _id: 9 },
-  //   { img: image10, name: "Blusa Faxttex", price: "29.99", _id: 10 },
-  //   { img: image11, name: "Blusa Faxttex", price: "19.99", _id: 11 },
-  //   { img: image12, name: "Blusa Faxttex", price: "29.99", _id: 12 },
-  //   { img: image13, name: "Blusa Faxttex", price: "29.99", _id: 13 },
-  //   { img: image14, name: "Blusa Faxttex", price: "19.99", _id: 14 },
-  //   { img: image15, name: "Blusa Faxttex", price: "29.99", _id: 15 },
+  {
+    img: image1,
+    name: "Blusa Zapda",
+    price: "19.99",
+    _id: 1,
+    stockCount: 5,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image2,
+    name: "Blusa Daltex",
+    price: "29.99",
+    _id: 2,
+    stockCount: 3,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image3,
+    name: "Blusa Dentoex",
+    price: "19.99",
+    _id: 3,
+    stockCount: 9,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image4,
+    name: "Blusa Newity",
+    price: "22.99",
+    _id: 4,
+    stockCount: 2,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image5,
+    name: "Blusa Dentotam",
+    price: "25.99",
+    _id: 5,
+    stockCount: 0,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image6,
+    name: "Blusa Fixair",
+    price: "19.99",
+    _id: 6,
+    stockCount: 8,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image7,
+    name: "Blusa Lexywarm",
+    price: "29.99",
+    _id: 7,
+    stockCount: 0,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: image8,
+    name: "Regata Emotion",
+    price: "59.99",
+    _id: 8,
+    stockCount: 6,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
 ];
 
 export const blogposts = [
