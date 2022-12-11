@@ -1,14 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 import "./store_detailspage.css";
-import { products } from "../../data";
 import AddButton from "../../components/common/StoreButtons/StoreButtonOne";
 import StoreSocialMedia from "../../components/common/StoreSocialMedia";
 import exit from "../../assets/icons/exit-icon.svg";
 
 const StoreDetails = () => {
-  const { id } = useParams();
-  const product = products.find((p) => String(p._id) === id);
+  const params = useParams();
+  const [product, setProduct] = useState({});
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${params.id}`);
+      setProduct(data);
+    };
+    fetchProduct();
+  }, [params]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

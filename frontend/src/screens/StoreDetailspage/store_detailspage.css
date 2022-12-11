@@ -15,6 +15,7 @@
   font-size: 1rem;
   color: var(--dark-color);
   position: relative;
+  padding: 0 15px;
 }
 
 .store__product-details--goback::after {
@@ -41,6 +42,7 @@
   display: flex;
   gap: 20px;
   padding: 15px;
+  min-height: 30vh;
 }
 
 .store__product-details--image img {
@@ -49,6 +51,7 @@
   margin: auto;
   height: 100%;
   object-fit: cover;
+  margin-left: 0;
 }
 
 .store__product-details--image,

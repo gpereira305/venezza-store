@@ -7,6 +7,8 @@ import StoreLogin from "./components/StoreLogin";
 import StoreRegister from "./components/StoreRegister";
 import StoreNotfound from "./screens/StoreNotfound";
 
+// npm run dev
+
 function App() {
   return (
     <BrowserRouter>
