@@ -1,14 +1,19 @@
 import React from "react";
-import { blogposts } from "../../data";
 import StoreBlogCard from "../common/StoreBlogCard";
+import StoreSections from "../common/StoreSections";
+import { blogposts } from "../../data";
 import "./store_blog.css";
 
 const index = () => {
   return (
     <div className="store__blog">
+      <StoreSections
+        title="Histórias de amor à moda"
+        subtitle="Nosso blog de estilo de vida"
+      />
       <div className="store__blog-container store__container">
         {blogposts.map((post, i) => (
-          <StoreBlogCard post={post} key={i} />
+          <StoreBlogCard post={post} key={post.id} />
         ))}
       </div>
     </div>

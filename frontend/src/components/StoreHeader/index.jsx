@@ -25,7 +25,6 @@ const StoreHeader = () => {
             <ul>
               <li>Novidades</li>
               <li>Promoções</li>
-              <li>Blog</li>
               <li>
                 <Link to={"/login"}>Login</Link>
               </li>

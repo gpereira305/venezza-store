@@ -1,27 +1,3 @@
-// produtos
-import image1 from "../assets/images/products/product-01.jpg";
-import image2 from "../assets/images/products/product-02.jpg";
-import image3 from "../assets/images/products/product-03.jpg";
-import image4 from "../assets/images/products/product-04.jpg";
-import image5 from "../assets/images/products/product-05.jpg";
-import image6 from "../assets/images/products/product-06.jpg";
-import image7 from "../assets/images/products/product-07.jpg";
-import image8 from "../assets/images/products/product-08.jpg";
-import image9 from "../assets/images/products/product-09.jpg";
-import image10 from "../assets/images/products/product-10.jpg";
-import image11 from "../assets/images/products/product-11.jpg";
-import image12 from "../assets/images/products/product-12.jpg";
-import image13 from "../assets/images/products/product-13.jpg";
-import image14 from "../assets/images/products/product-14.jpg";
-import image15 from "../assets/images/products/product-15.jpg";
-
-// posts blog
-import post1 from "../assets/images/post-1.jpg";
-import post2 from "../assets/images/post-2.jpg";
-import post3 from "../assets/images/post-3.jpg";
-import post4 from "../assets/images/post-4.jpg";
-import post5 from "../assets/images/post-5.jpg";
-
 // post instagram
 import instagramPost1 from "../assets/images/instagram-post.jpg";
 import instagramPost2 from "../assets/images/instagram-post2.jpg";
@@ -36,112 +12,17 @@ import instagramPost10 from "../assets/images/instagram-post10.jpg";
 import instagramPost11 from "../assets/images/instagram-post11.jpg";
 import instagramPost12 from "../assets/images/instagram-post12.jpg";
 
-// export const products = [
-//   {
-//     img: image1,
-//     name: "Blusa Zapda",
-//     price: "19.99",
-//     _id: 1,
-//     stockCount: 5,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image2,
-//     name: "Blusa Daltex",
-//     price: "29.99",
-//     _id: 2,
-//     stockCount: 3,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image3,
-//     name: "Blusa Dentoex",
-//     price: "19.99",
-//     _id: 3,
-//     stockCount: 9,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image4,
-//     name: "Blusa Newity",
-//     price: "22.99",
-//     _id: 4,
-//     stockCount: 2,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image5,
-//     name: "Blusa Dentotam",
-//     price: "25.99",
-//     _id: 5,
-//     stockCount: 0,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image6,
-//     name: "Blusa Fixair",
-//     price: "19.99",
-//     _id: 6,
-//     stockCount: 8,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image7,
-//     name: "Blusa Lexywarm",
-//     price: "29.99",
-//     _id: 7,
-//     stockCount: 0,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-//   {
-//     img: image8,
-//     name: "Regata Emotion",
-//     price: "59.99",
-//     _id: 8,
-//     stockCount: 6,
-//     desc: `
-//        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
-//         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
-//         necessitatibus iure voluptatibus. Quia est adipisci officia porro
-//         perspiciatis voluptas laborum ad eius totam nam alias at, iure
-//         reprehenderit labore architecto cumque.`,
-//   },
-// ];
+// posts blog
+import post2 from "../assets/images/post-2.jpg";
+import post3 from "../assets/images/post-3.jpg";
+import post4 from "../assets/images/post-4.jpg";
+import post5 from "../assets/images/post-5.jpg";
+
+// users comments
+import user1 from "../assets/images/comments/girl-1.jpg";
+import user2 from "../assets/images/comments/girl-2.jpg";
+import user3 from "../assets/images/comments/girl-3.jpg";
+import user4 from "../assets/images/comments/girl-4.jpg";
 
 export const blogposts = [
   {
@@ -219,4 +100,47 @@ export const instaposts = [
   { img: instagramPost10, id: 10 },
   { img: instagramPost11, id: 11 },
   { img: instagramPost12, id: 12 },
+];
+
+export const comments = [
+  {
+    userImg: user1,
+    stars: "★★★★",
+    quote: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+                aut necessitatibus provident, odio ducimus sint excepturi sunt
+                voluptate, officia eligendi nam similique reprehenderit velit
+                quam iusto quaerat cum maiores commodi!`,
+    name: "Clarice Montes",
+    date: "21/08/2020",
+  },
+  {
+    userImg: user2,
+    stars: "★★★★★",
+    quote: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+                aut necessitatibus provident, odio ducimus sint excepturi sunt
+                voluptate, officia eligendi nam similique reprehenderit velit
+                quam iusto quaerat cum maiores commodi!`,
+    name: "Pamela de Sousa",
+    date: "03/12/2018",
+  },
+  {
+    userImg: user3,
+    stars: "★★★★",
+    quote: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+                aut necessitatibus provident, odio ducimus sint excepturi sunt
+                voluptate, officia eligendi nam similique reprehenderit velit
+                quam iusto quaerat cum maiores commodi!`,
+    name: "Mercedes Campos",
+    date: "12/08/2019",
+  },
+  {
+    userImg: user4,
+    stars: "★★★★★",
+    quote: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae
+                aut necessitatibus provident, odio ducimus sint excepturi sunt
+                voluptate, officia eligendi nam similique reprehenderit velit
+                quam iusto quaerat cum maiores commodi!`,
+    name: "Roberta Basco",
+    date: "21/02/2018",
+  },
 ];

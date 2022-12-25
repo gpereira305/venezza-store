@@ -1,6 +1,6 @@
 .store__main-banner {
   position: relative;
-  top: 60px;
+  /* top: 60px; */
 }
 
 .store__main-banner::after {

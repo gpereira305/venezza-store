@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./store_homepage.css";
 import StoreBanner from "../../components/StoreBanner";
-import StoreSections from "../../components/common/StoreSections";
 import StoreProductGrid from "../../components/StoreProductGrid";
+import StoreUserComments from "../../components/StoreUserComments";
 import StoreBlog from "../../components/StoreBlog";
 import StoreAdvantages from "../../components/StoreAdvantages";
 import StoreBackground from "../../components/StoreBackground";
+import "./store_homepage.css";
 
 const StoreHomepage = () => {
   const [products, setProducts] = useState([]);
@@ -27,15 +27,11 @@ const StoreHomepage = () => {
   return (
     <main>
       <StoreBanner />
-      <StoreSections title="Nova Coleção" subtitle="Novidades" />
       <StoreProductGrid products={products} />
-      <StoreSections
-        title="Histórias de amor à moda"
-        subtitle="Nosso blog de estilo de vida"
-      />
-      <StoreBlog />
+      <StoreUserComments />
       <StoreAdvantages />
       <StoreBackground />
+      <StoreBlog />
     </main>
   );
 };

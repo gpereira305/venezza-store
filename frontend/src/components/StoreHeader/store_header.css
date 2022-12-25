@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  height: 60px;
 }
 
 .store__navbar {
@@ -40,7 +41,8 @@
   gap: 30px;
 }
 
-.store__navbar--nav ul li {
+.store__navbar--nav ul li,
+.store__navbar--nav ul li a {
   font-size: 1rem;
   transition: var(--transition);
   position: relative;
