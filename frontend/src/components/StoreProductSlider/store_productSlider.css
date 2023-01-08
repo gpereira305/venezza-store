@@ -1,0 +1,23 @@
+.store__slider {
+}
+
+.store__slider--swiper .store__item--img {
+  min-height: 370px;
+}
+.store__slider--swiper .swiper-button-next:after,
+.swiper-button-prev:after {
+  color: var(--salmon-color);
+  font-size: 1.5rem;
+}
+
+.store__slider--swiper .swiper-pagination-bullet {
+  display: none;
+}
+
+/*
+* ----------------------
+*    breakpoints
+* ---------------------- 
+*/
+@media (max-width: 576px) {
+}

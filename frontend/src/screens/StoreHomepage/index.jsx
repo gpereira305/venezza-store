@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import StoreBanner from "../../components/StoreBanner";
 import StoreProductGrid from "../../components/StoreProductGrid";
+import StoreProductSlider from "../../components/StoreProductSlider";
 import StoreUserComments from "../../components/StoreUserComments";
 import StoreBlog from "../../components/StoreBlog";
 import StoreAdvantages from "../../components/StoreAdvantages";
@@ -27,11 +28,12 @@ const StoreHomepage = () => {
   return (
     <main>
       <StoreBanner />
+      <StoreProductSlider products={products} />
       <StoreProductGrid products={products} />
-      <StoreUserComments />
       <StoreAdvantages />
       <StoreBackground />
       <StoreBlog />
+      <StoreUserComments />
     </main>
   );
 };

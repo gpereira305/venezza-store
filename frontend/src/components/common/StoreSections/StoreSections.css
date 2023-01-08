@@ -20,3 +20,15 @@
   font-size: 2rem;
   line-height: 45px;
 }
+
+/*
+* ----------------------
+*    breakpoints
+* ---------------------- 
+*/
+@media (max-width: 576px) {
+  .store__section h3 {
+    font-size: 1.7rem;
+    line-height: 35px;
+  }
+}

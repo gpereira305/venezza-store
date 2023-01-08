@@ -103,6 +103,45 @@ const products = [
         perspiciatis voluptas laborum ad eius totam nam alias at, iure
         reprehenderit labore architecto cumque.`,
   },
+  {
+    img: "/images/product-09.jpg",
+    name: "Julia Emotion",
+    price: "79.99",
+    _id: 9,
+    stockCount: 2,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: "/images/product-10.jpg",
+    name: "Monica Escampano",
+    price: "89.99",
+    _id: 10,
+    stockCount: 0,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
+  {
+    img: "/images/product-11.jpg",
+    name: "Mirna Moscoll",
+    price: "79.99",
+    _id: 11,
+    stockCount: 16,
+    desc: `
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
+        illum eum officiis ex consectetur vero nobis ullam, natus, iusto
+        necessitatibus iure voluptatibus. Quia est adipisci officia porro
+        perspiciatis voluptas laborum ad eius totam nam alias at, iure
+        reprehenderit labore architecto cumque.`,
+  },
 ];
 
-module.exports = products;
+export default products;
