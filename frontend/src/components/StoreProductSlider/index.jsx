@@ -10,7 +10,7 @@ import "swiper/css/bundle";
 
 const StoreProductSlider = ({ products }) => {
   return (
-    <div className="store__grid-container">
+    <section className="store__grid-container" id="sale">
       <StoreSections
         title="Produtos em promoção"
         subtitle="Todos os produtos com 10% off"
@@ -85,7 +85,7 @@ const StoreProductSlider = ({ products }) => {
           ))} */}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

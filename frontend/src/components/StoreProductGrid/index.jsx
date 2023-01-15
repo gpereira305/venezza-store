@@ -7,7 +7,7 @@ import StoreSections from "../common/StoreSections";
 
 const StoreProductGrid = ({ products }) => {
   return (
-    <div className="store__grid-container">
+    <section className="store__grid-container" id="new-collection">
       <StoreSections title="Nova Coleção" subtitle="Novidades" />
       <div className="store__grid store__container">
         {products.map(
@@ -25,7 +25,7 @@ const StoreProductGrid = ({ products }) => {
             )
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -7,6 +7,8 @@ import StoreUserComments from "../../components/StoreUserComments";
 import StoreBlog from "../../components/StoreBlog";
 import StoreAdvantages from "../../components/StoreAdvantages";
 import StoreBackground from "../../components/StoreBackground";
+import StoreGoTop from "../../components/common/StoreGoTop";
+
 import "./store_homepage.css";
 
 const StoreHomepage = () => {
@@ -34,6 +36,7 @@ const StoreHomepage = () => {
       <StoreBackground />
       <StoreBlog />
       <StoreUserComments />
+      <StoreGoTop />
     </main>
   );
 };

@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 40px;
+  position: relative;
   transition: var(--transition);
 }
 
@@ -36,21 +37,29 @@
   color: var(--black-color);
 }
 
-.store__navbar--nav ul {
+.store__navbar--link {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  flex: 2;
+  max-width: 696px;
+}
+
+.store__navbar--links,
+.store__navbar--user {
+  display: flex;
+  align-items: center;
   gap: 30px;
 }
 
-.store__navbar--nav ul li,
-.store__navbar--nav ul li a {
+.store__navbar--links a {
   font-size: 1rem;
-  transition: var(--transition);
   position: relative;
   cursor: pointer;
   color: var(--black-color);
 }
 
-.store__navbar--nav li::after {
+.store__navbar--links a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -59,25 +68,35 @@
   bottom: 0;
   left: 0;
   background-color: var(--black-color);
+  transition: var(--transition);
 }
 
-.store__navbar--nav li:hover::after {
+.store__navbar--links a:hover::after {
   opacity: 1;
+}
+
+.store__user--bag,
+.store__user--login,
+.store__user--burger {
+  max-width: 25px;
+  cursor: pointer;
+}
+
+.store__navbar--overlay,
+.store__user--burger {
+  display: none;
 }
 
 .store__sticky-header {
   transition: var(--transition);
 }
 
+/* transição navbar sticky */
 .store__sticky-header.store__navbar {
   box-shadow: rgb(0 0 0 / 30%) 0px 3px 10px 0px;
   background-color: rgb(245 114 80 / 30%);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-}
-
-.store__hamburger {
-  display: none;
 }
 
 /*
@@ -86,14 +105,69 @@
 * ---------------------- 
 */
 
+@media (max-width: 1240px) {
+  .store__navbar--link {
+    max-width: 603px;
+  }
+}
+
 @media (max-width: 990px) {
-  .store__navbar--nav ul {
+  .store__navbar--link {
+    max-width: 390px;
+  }
+}
+
+@media (max-width: 660px) {
+  /* .store__user--bag,
+  .store__user--login {
     display: none;
+  } */
+
+  .store__navbar--overlay,
+  .store__user--burger {
+    display: block;
   }
 
-  .store__hamburger {
-    display: block;
+  .store__user--burger {
+    z-index: 10000;
+  }
+
+  /* .store__navbar--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.788);
+    z-index: 200;
+  } */
+
+  .store__navbar--link {
+    position: fixed;
+    top: 60px;
+    opacity: 0;
+    right: 0;
     width: 100%;
-    max-width: 24px;
+    max-width: none;
+    background-color: #fff;
+    z-index: 100;
+    padding: 15px;
+    gap: 10px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    transition: all ease-in-out 0.4s;
+    visibility: hidden;
+  }
+  .store__link--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .store__navbar--links {
+    flex-direction: column-reverse;
+  }
+
+  .store__navbar--user {
+    flex-direction: column-reverse;
   }
 }
