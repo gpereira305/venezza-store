@@ -2,8 +2,7 @@ const products = [
   {
     img: "/images/product-01.jpg",
     name: "Blusa Zapda",
-    price: "19.99",
-    _id: 1,
+    price: "19.99", 
     stockCount: 5,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -15,8 +14,7 @@ const products = [
   {
     img: "/images/product-02.jpg",
     name: "Blusa Daltex",
-    price: "29.99",
-    _id: 2,
+    price: "29.99", 
     stockCount: 3,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -28,8 +26,7 @@ const products = [
   {
     img: "/images/product-03.jpg",
     name: "Blusa Dentoex",
-    price: "19.99",
-    _id: 3,
+    price: "19.99", 
     stockCount: 9,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -41,8 +38,7 @@ const products = [
   {
     img: "/images/product-04.jpg",
     name: "Blusa Newity",
-    price: "22.99",
-    _id: 4,
+    price: "22.99", 
     stockCount: 2,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -54,8 +50,7 @@ const products = [
   {
     img: "/images/product-05.jpg",
     name: "Blusa Dentotam",
-    price: "25.99",
-    _id: 5,
+    price: "25.99", 
     stockCount: 0,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -67,8 +62,7 @@ const products = [
   {
     img: "/images/product-06.jpg",
     name: "Blusa Fixair",
-    price: "19.99",
-    _id: 6,
+    price: "19.99", 
     stockCount: 8,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -80,8 +74,7 @@ const products = [
   {
     img: "/images/product-07.jpg",
     name: "Blusa Lexywarm",
-    price: "29.99",
-    _id: 7,
+    price: "29.99", 
     stockCount: 0,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -93,8 +86,7 @@ const products = [
   {
     img: "/images/product-08.jpg",
     name: "Regata Emotion",
-    price: "59.99",
-    _id: 8,
+    price: "59.99", 
     stockCount: 6,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -106,8 +98,7 @@ const products = [
   {
     img: "/images/product-09.jpg",
     name: "Julia Emotion",
-    price: "79.99",
-    _id: 9,
+    price: "79.99", 
     stockCount: 2,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -119,8 +110,7 @@ const products = [
   {
     img: "/images/product-10.jpg",
     name: "Monica Escampano",
-    price: "89.99",
-    _id: 10,
+    price: "89.99", 
     stockCount: 0,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
@@ -132,8 +122,7 @@ const products = [
   {
     img: "/images/product-11.jpg",
     name: "Mirna Moscoll",
-    price: "79.99",
-    _id: 11,
+    price: "79.99", 
     stockCount: 16,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,

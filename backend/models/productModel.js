@@ -13,15 +13,15 @@ const productSchema = mongoose.Schema(
     },
     brand: {
       type: String,
-      required: true,
+      // required: true,
     },
     category: {
       type: String,
-      required: true,
+      // required: true,
     },
     description: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,

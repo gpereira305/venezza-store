@@ -6,6 +6,7 @@ import quicklook from "../../assets/icons/eye.svg";
 import StoreSections from "../common/StoreSections";
 
 const StoreProductGrid = ({ products }) => {
+  console.log(products)
   return (
     <section className="store__grid-container" id="new-collection">
       <StoreSections title="Nova Coleção" subtitle="Novidades" />
