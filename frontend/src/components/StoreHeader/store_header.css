@@ -16,7 +16,7 @@
   transition: var(--transition);
   padding: 10px 0px;
   z-index: 100;
-  background-color: var(--salmon-color);
+  background: linear-gradient( 90deg, rgba(254, 96, 55, 1) 0%, rgb(255 145 117 / 58%) 51%, rgba(254, 242, 238, 0) 100% ); 
 }
 
 .store__navbar .store__container {
@@ -26,6 +26,7 @@
   min-height: 40px;
   position: relative;
   transition: var(--transition);
+
 }
 
 .store__navbar--logo {
@@ -93,10 +94,10 @@
 
 /* transição navbar sticky */
 .store__sticky-header.store__navbar {
+  background: rgb(245 114 80 / 50%);
   box-shadow: rgb(0 0 0 / 30%) 0px 3px 10px 0px;
-  background-color: rgb(245 114 80 / 30%);
   -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);    
 }
 
 /*

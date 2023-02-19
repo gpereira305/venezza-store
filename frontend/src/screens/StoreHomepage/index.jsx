@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+// import axios from "axios";
+import {useDispatch, useSelector} from 'react-redux';
 import StoreBanner from "../../components/StoreBanner";
 import StoreProductGrid from "../../components/StoreProductGrid";
 import StoreProductSlider from "../../components/StoreProductSlider";
@@ -8,30 +9,30 @@ import StoreBlog from "../../components/StoreBlog";
 import StoreAdvantages from "../../components/StoreAdvantages";
 import StoreBackground from "../../components/StoreBackground";
 import StoreGoTop from "../../components/common/StoreGoTop";
+import { listProducts } from '../../actions/productActions' 
 
 import "./store_homepage.css";
 
 const StoreHomepage = () => {
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const productList = useSelector(state => state.productList);
+  const { loading, error, products } = productList;
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get("/api/products");
-      setProducts(data);
-    };
-    fetchProducts();
-  }, []);
+    dispatch(listProducts())
+  }, [dispatch]);
 
   // manter a navegação no topo ao trocar de página
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+ 
 
   return (
     <main>
       <StoreBanner />
-      <StoreProductSlider products={products} />
-      <StoreProductGrid products={products} />
+      <StoreProductSlider products={products} error={error} loading={loading} />
+      <StoreProductGrid products={products} error={error} loading={loading} />
       <StoreAdvantages />
       <StoreBackground />
       <StoreBlog />

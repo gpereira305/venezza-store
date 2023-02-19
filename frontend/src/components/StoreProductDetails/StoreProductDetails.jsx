@@ -37,7 +37,7 @@ const StoreProductDetails = () => {
           <h2>R$ {product.price}</h2>
           <span></span>
           <p>{product.desc}</p>
-          {product.stockCount > 0 ? (
+          {product.countInStock > 0 ? (
             <form className="store__description--action-select">
               <select name="" id="">
                 <option value="Selecione">Selecione</option>

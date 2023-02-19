@@ -1,4 +1,5 @@
 .store__slider {
+  min-height: 20vh;
 }
 
 .store__slider--swiper .store__item--img {

@@ -1,9 +1,9 @@
 const products = [
   {
-    img: "/images/product-01.jpg",
+    image: "/images/product-01.jpg",
     name: "Blusa Zapda",
     price: "19.99", 
-    stockCount: 5,
+    countInStock: 5,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -12,10 +12,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-02.jpg",
+    image: "/images/product-02.jpg",
     name: "Blusa Daltex",
     price: "29.99", 
-    stockCount: 3,
+    countInStock: 3,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -24,10 +24,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-03.jpg",
+    image: "/images/product-03.jpg",
     name: "Blusa Dentoex",
     price: "19.99", 
-    stockCount: 9,
+    countInStock: 9,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -36,10 +36,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-04.jpg",
+    image: "/images/product-04.jpg",
     name: "Blusa Newity",
     price: "22.99", 
-    stockCount: 2,
+    countInStock: 2,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -48,10 +48,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-05.jpg",
+    image: "/images/product-05.jpg",
     name: "Blusa Dentotam",
     price: "25.99", 
-    stockCount: 0,
+    countInStock: 0,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -60,10 +60,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-06.jpg",
+    image: "/images/product-06.jpg",
     name: "Blusa Fixair",
     price: "19.99", 
-    stockCount: 8,
+    countInStock: 8,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -72,10 +72,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-07.jpg",
+    image: "/images/product-07.jpg",
     name: "Blusa Lexywarm",
     price: "29.99", 
-    stockCount: 0,
+    countInStock: 0,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -84,10 +84,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-08.jpg",
+    image: "/images/product-08.jpg",
     name: "Regata Emotion",
     price: "59.99", 
-    stockCount: 6,
+    countInStock: 6,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -96,10 +96,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-09.jpg",
+    image: "/images/product-09.jpg",
     name: "Julia Emotion",
     price: "79.99", 
-    stockCount: 2,
+    countInStock: 2,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -108,10 +108,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-10.jpg",
+    image: "/images/product-10.jpg",
     name: "Monica Escampano",
     price: "89.99", 
-    stockCount: 0,
+    countInStock: 0,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
@@ -120,10 +120,10 @@ const products = [
         reprehenderit labore architecto cumque.`,
   },
   {
-    img: "/images/product-11.jpg",
+    image: "/images/product-11.jpg",
     name: "Mirna Moscoll",
     price: "79.99", 
-    stockCount: 16,
+    countInStock: 16,
     desc: `
        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione,
         illum eum officiis ex consectetur vero nobis ullam, natus, iusto
