@@ -1,16 +1,14 @@
-import React from 'react'
-import { Alert } from 'react-bootstrap';
+import React from 'react' 
 
 
 const StoreMessage = ({ variant, children }) => {
   return (
-    <Alert variant={variant}>{ children }</Alert>
+    <div>
+      <h2>{ children }</h2>
+    </div>
   )
 };
-
-StoreMessage.defaultProps = {
-   variant: 'info'
-}
+ 
 
 
 export default StoreMessage

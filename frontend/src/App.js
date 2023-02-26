@@ -6,7 +6,7 @@ import StoreDetailspage from "./screens/StoreDetailspage";
 import StoreLogin from "./components/StoreLogin";
 import StoreRegister from "./components/StoreRegister";
 import StoreNotfound from "./screens/StoreNotfound";
-
+import StoreCart from "./screens/StoreCartpage";
 // npm run dev
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path={"/"} element={<StoreHomepage />} />
         <Route exact path={"/product/:id"} element={<StoreDetailspage />} />
+        <Route exact path={"/cart/:id"} element={<StoreCart />} />
         <Route exact path={"/login"} element={<StoreLogin />} />
         <Route exact path={"/register"} element={<StoreRegister />} />
         <Route path="*" element={<StoreNotfound />} />

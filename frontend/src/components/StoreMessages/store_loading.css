@@ -1,0 +1,70 @@
+ 
+
+.store__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 100%;
+    min-height: 370px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 5%); 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+
+.store__card--image {
+    height: 300px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    width: 100%;
+}
+ 
+
+.store__card.is-loading .store__card--image {
+   height: 100%; 
+   display: flex;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0; 
+}
+ 
+.store__card.is-loading .store__card--text {
+   height: 16px; 
+   max-width: 150px; 
+   margin: auto;
+   width: 100%;
+   position: absolute;
+   border-radius: 5px; 
+   background: #dfdfdf!important; 
+   bottom: 18px;
+   left: 0;
+   right: 0;
+}
+
+.store__card.is-loading .store__card--image, 
+.store__card.is-loading .store__card--text {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%); 
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+          animation: 1.5s shine linear infinite;
+}
+
+@-webkit-keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

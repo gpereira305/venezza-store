@@ -13,9 +13,18 @@ const StoreProductGrid = ({ products, loading, error }) => {
       <StoreSections title="Nova Coleção" subtitle="Novidades" /> 
         <div className="store__grid store__container">
           {loading ? (
-            <StoreLoader/>
+          <>
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+          </>
           ): error ? (
-            <StoreMessage variant={'danger'}>{error}</StoreMessage>
+            <StoreMessage>{error}</StoreMessage>
           ): (
            <>
             {products.map(product =>

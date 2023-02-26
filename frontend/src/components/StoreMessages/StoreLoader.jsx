@@ -1,16 +1,13 @@
-import React from 'react'
-import { Spinner } from 'react-bootstrap';
+import React from 'react';
+import "./store_loading.css";
 
 
 const StoreLoader = () => {
   return (
-    <Spinner
-     animation={'border'}
-     role={'status'}
-     style={{ width: '100px', height: '100px', margin: 'auto', display: 'block'}}
-    >
-     <span>Carregando...</span> 
-    </Spinner>
+  <div className="store__card is-loading">
+    <div className="store__card--image"></div> 
+      <p className="store__card--text"></p> 
+  </div>
   )
 }
 

@@ -11,6 +11,7 @@ import StoreLoader from "../StoreMessages/StoreLoader";
 import StoreMessage from "../StoreMessages/StoreMessage";
 
 const StoreProductSlider = ({ products, loading, error  }) => { 
+
  
 
   return (
@@ -22,9 +23,14 @@ const StoreProductSlider = ({ products, loading, error  }) => {
 
       <div className="store__slider store__container">
         {loading ? (
-          <StoreLoader/>
+          <div className="store__grid">
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+            <StoreLoader/> 
+          </div>
         ): error ? (
-          <StoreMessage variant={'danger'}>{error}</StoreMessage>
+          <StoreMessage>{error}</StoreMessage>
         ): (
         <Swiper
           className="store__slider--swiper"
