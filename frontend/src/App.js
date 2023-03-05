@@ -6,7 +6,7 @@ import StoreDetailspage from "./screens/StoreDetailspage";
 import StoreLogin from "./components/StoreLogin";
 import StoreRegister from "./components/StoreRegister";
 import StoreNotfound from "./screens/StoreNotfound";
-import StoreCart from "./screens/StoreCartpage";
+import StoreCart from "./screens/StoreCartpage/StoreCartpage";
 // npm run dev
 
 function App() {
