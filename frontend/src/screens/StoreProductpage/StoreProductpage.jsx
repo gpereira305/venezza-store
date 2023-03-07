@@ -4,12 +4,14 @@ import { useDispatch, useSelector }  from 'react-redux';
 import { listProductDetails } from "../../actions/productActions"; 
 import StoreSocialMedia from "../../components/common/StoreSocialMedia";
 import exit from "../../assets/icons/exit-icon.svg";
-import "./store_details-page.css";
-import StoreLoader from "../StoreMessages/StoreLoader";
-import StoreMessage from "../StoreMessages/StoreMessage";
+import "./store_productpage.css";
+import StoreLoader from "../../components/StoreMessages/StoreLoader";
+import StoreMessage from "../../components/StoreMessages/StoreMessage";
 
-const StoreProductDetails = () => {  
-  const [qty, setQty] = useState(1);
+
+
+const StoreProductpage = () => {
+ const [qty, setQty] = useState(1);
 
   const params = useParams();  
   const navigate = useNavigate();
@@ -34,7 +36,8 @@ const StoreProductDetails = () => {
  
 
   return (
-    <div className="store__product-details">
+    <main className=" store__container">
+         <div className="store__product-details">
       <Link className="store__product-details--goback" to={"/"}>
         <img src={exit} alt="Sair" />
         Voltar
@@ -98,7 +101,8 @@ const StoreProductDetails = () => {
         )}
       </div>
     </div>
+    </main>
   );
 };
 
-export default StoreProductDetails;
+export default StoreProductpage;

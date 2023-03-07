@@ -3,6 +3,7 @@ import { Link, useParams, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../../components/StoreMessages/StoreMessage';
 import { addToCart } from '../../actions/cartActions';
+import './store_cartpage.css';
 
 const StoreCartpage = ( ) => {
   const params = useParams();  
