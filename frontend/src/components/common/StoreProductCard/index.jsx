@@ -17,7 +17,7 @@ const index = ({
       <p className="store__item--title">{productName}</p>
 
       <div className="store__item--icons">
-        <Link to={""}>
+        <Link to={`/cart/${id}`}>
           <img src={bagIcon} alt="Sacola" title="Carrinho" />
         </Link>
         <Link to={`/product/${id}`}>

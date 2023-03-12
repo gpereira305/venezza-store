@@ -25,7 +25,7 @@ const StoreProductGrid = ({ products, loading, error }) => {
           </>
           ): error ? (
             <StoreMessage>{error}</StoreMessage>
-          ): (
+          ) : (
            <>
             {products.map(product =>
               product.price > 20 && (

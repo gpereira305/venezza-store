@@ -83,6 +83,14 @@ img {
   --transition: all 0.3s ease;
 }
 
+.store_minheight--positon {
+  position: relative;
+  top: 0px;
+  min-height: 74vh; 
+  margin: 70px auto 20px; 
+}
+
+
 .fade-in {
   -webkit-animation: fade-in 0.5s both;
   animation: fade-in 0.5s both;

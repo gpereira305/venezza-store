@@ -114,7 +114,7 @@
   transition: all ease .3s;
 }
 
-.store__header--cart  {
+.store__header--cart {
   position: fixed;
   z-index: 10000;
   background-color: #fff;
@@ -125,13 +125,13 @@
   transform: translate(430px);
   transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 } 
-.cart-toggle { 
+.offcanvas-active { 
   opacity: 1;
   visibility: visible;
   transform: translate(0);
 }  
 
-body.cart-toggle {
+body.offcanvas-active {
   overflow-y: hidden!important;
 }
 
@@ -155,6 +155,8 @@ body.cart-toggle {
   color: var(--white-color); 
 }
 
+
+.store__header--account {}
 
 /*
 * ----------------------
@@ -191,7 +193,7 @@ body.cart-toggle {
 
 
 @media (max-width: 520px) {
-  .store__header--cart.cart-toggle {
+  .store__header--cart.offcanvas-active {
     width: 100%; 
   }
 }
