@@ -1,0 +1,20 @@
+  
+.store__empty-cart {
+   display: flex;
+   justify-content: center; 
+   min-height: calc(100vh - 510px);
+   align-items: center;
+}
+.store__empty-cart--title {
+   font-size: 2rem;
+   font-weight: 300;
+   text-align: center;
+   line-height: 40px;
+}
+
+@media(max-width: 470px){
+   .store__empty-cart--title {
+      font-size: 1.8rem;
+      line-height: 32px;
+   }
+}

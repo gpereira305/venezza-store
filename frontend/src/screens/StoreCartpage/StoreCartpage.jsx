@@ -26,40 +26,37 @@ const StoreCartpage = ( ) => {
      if(productId) {
       dispatch(addToCart(productId, qty))
      }
-  }, [dispatch, productId, qty])
+  }, [dispatch, productId, qty]) 
 
 
   return (
     <main className="store__container">
-      <div className="store__product-cart store_minheight--positon">
-           <Link className="store__product-details--goback" to={"/"}>
-              <img src={exit} alt="Sair" />
-              Voltar
-          </Link>
-          <br />
-          <br /> 
-           <div>
-              <div style={{display: 'flex',justifyContent:'center', marginBottom: '60px' }}>
-                <h1>Carrinho</h1>
-              </div>
+      <div className="store__product-cart store_minheight--position">   
+               <Link className="store__product-details--goback" to={"/"}>
+                    <img src={exit} alt="Sair" />
+                    Voltar
+               </Link> 
 
-              <ul style={{display: 'flex', flexDirection: 'column'}}>
-                {cartItems.length && cartItems.map((item, i) => (
-                    <li key={i} style={{display: 'flex',justifyContent:'space-between', alignItems: 'flex-start', marginBottom: '10px', paddingBottom: '10px', borderBottom: '1px solid tomato' }}>
-                      <div style={{display: 'flex', gap: '20px'}}>
-                          <img src={item.image} alt={item.name} title={item.name} style={{maxWidth: '100px'}}/>
-                          <div>
-                            <h2>{item.name}</h2>
-                              <p>Cor: Cinza escuro</p>
-                              <p>Tam: M</p>
-                            <p>Preço: R$ {item.price} à vista</p>
-                          </div>
-                      </div> 
-                      <img src={trash} alt="Deletar" title='Deletar esse item'/> 
-                    </li>  
-                ))}
-              </ul>
-           </div> 
+          <ul style={{display: 'flex', flexDirection: 'column'}}>
+               {!cartItems.length ?  (
+               <div className='store__empty-cart'>
+                    <h1 className='store__empty-cart--title'>Seu carrinho está vazio...</h1>
+               </div>
+               ) :cartItems.map((item) => (
+               <li key={item.id} style={{display: 'flex',justifyContent:'space-between', alignItems: 'flex-start', marginBottom: '10px', paddingBottom: '10px', borderBottom: '1px solid tomato' }}>
+                    <div style={{display: 'flex', gap: '20px'}}>
+                         <img src={item.image} alt={item.name} title={item.name} style={{maxWidth: '100px'}}/>
+                         <div>
+                         <h2>{item.name}</h2>
+                         <p>Cor: Cinza escuro</p>
+                         <p>Tam: M</p>
+                         <p>Preço: R$ {item.price} à vista</p>
+                         </div>
+                    </div> 
+                    <img src={trash} alt="Deletar" title='Deletar esse item'/> 
+               </li>  
+               ))}
+          </ul> 
       </div>
     </main>
   )

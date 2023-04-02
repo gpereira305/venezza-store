@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"; 
-import { Link } from "react-router-dom"; 
+import { Link, useLocation  } from "react-router-dom"; 
 import "./store_header.css";
 import shoppingBag from "../../assets/icons/shop-bag.svg";
 import user from "../../assets/icons/user.svg";
@@ -7,10 +7,11 @@ import close from "../../assets/icons/close.svg";
 
 const StoreHeader = ({id}) => {
   const [small, setSmall] = useState(false);
-  const [cartActive, setCartActive] = useState(false);  
+  const [cartActive, setCartActive] = useState(false);   
   
- 
-  useEffect(() => {
+  const { pathname } = useLocation(); 
+
+  useEffect(() => { 
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
         setSmall(window.pageYOffset > 60)
@@ -30,6 +31,7 @@ const StoreHeader = ({id}) => {
     return  setCartActive(!cartActive); 
   };   
    
+  console.log(`/product/${id}`)
 
 
   return (
@@ -42,8 +44,18 @@ const StoreHeader = ({id}) => {
 
           <div className="store__navbar--link">
             <div className="store__navbar--links">
-              <a href="/#new-collection">Novidades</a>
-              <a href="/#sale">Promoções</a>
+              {pathname === '/' && (
+               <>
+                  <a className="store__links--item"  href="/#new-collection">Novidades</a>
+                  <a className="store__links--item"  href="/#sale">Promoções</a>
+               </>
+              )}
+              {pathname === `/cart/${id}` && (
+                <small className="store__links--item">Carrinho</small>
+              )}
+              {pathname === '/product' && (
+                <small className="store__links--item">Detalhe do produto</small>
+              )}
             </div>
             <span className="store__navbar--overlay"></span>
             <div className="store__navbar--user"> 
@@ -60,7 +72,7 @@ const StoreHeader = ({id}) => {
       <div className={`store__header--overlay ${cartActive ? "offcanvas-active" : "store__header--overlay"}`} onClick={toggleCartOffcanvas}></div>
       <div className={`store__header--cart ${cartActive ? "offcanvas-active" : "store__header--cart"}`}>
           <div className="store__cart--header">
-              <img onClick={toggleCartOffcanvas} className="" src={close} alt="Fechar" title="Fechar Carrinho"/>
+              <img onClick={toggleCartOffcanvas} src={close} alt="Fechar" title="Fechar Carrinho"/>
               <h1 className="store__header--title">Seu Carrinho</h1>
               <span></span>
           </div> 

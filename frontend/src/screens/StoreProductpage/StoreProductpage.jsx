@@ -11,8 +11,7 @@ import StoreMessage from "../../components/StoreMessages/StoreMessage";
 
 
 const StoreProductpage = () => {
- const [qty, setQty] = useState(1);
-
+ const [qty, setQty] = useState(1); 
   const params = useParams();  
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -37,67 +36,59 @@ const StoreProductpage = () => {
 
   return (
     <main className="store__container">
-       <div className="store__product-details store_minheight--positon">
-          <Link className="store__product-details--goback" to={"/"}>
-            <img src={exit} alt="Sair" />
-            Voltar
+       <div className="product-details store_minheight--positon">
+          <Link className="product-details__goback" to={"/"}>
+              <img src={exit} alt="Sair" />
+              Voltar
           </Link>
 
-          <div className="store__product-details--wrapper">
+          <div className="product-details__wrapper">
             {loading ? (<StoreLoader/>) : 
               error ? ( <StoreMessage variant={'danger'}>{error}</StoreMessage>
-            ) : (
-            <>
-            <figure className="store__product-details--image">
-                <img 
-                  className="store__image--product"
-                  src={product.image} 
-                  alt={product.name} 
-                  title={product.name} 
-                />
-              </figure>
-              <article className="store__product-details--description">
-                <div className="store__description--content">
-                    <h1 className="store__content--title">
-                      {product.name}
-                    </h1>
-                    <h2 className="store__content--price">
-                        R$ {product.price}
-                    </h2>
-                </div>
-    
-                <span></span>
+            ) : ( 
+             <div className="product-content">
+                <figure className="product-content__image">
+                    <img className="product-content__image--item"  src={product.image} 
+                      alt={product.name} title={product.name} 
+                    />
+                </figure>
 
-                <p className="store__description--text">
-                  {product.description}
-                </p>
-                {product.countInStock > 0 ? (
-                  <div className="store__description--form-container">
-                  <form className="store__description--action-select" 
-                    value={qty} onChange={(e)=> setQty(e.target.value)} 
-                  >
-                    <select>
-                      <option value="Selecione">Selecione</option> 
-                      {allProductInStock.map(q => (
-                      <option key={q + 1} value={q + 1}>{q + 1}</option>       
-                      ))} 
-                    </select>
-                  </form> 
-                  <button className="store__button-one"                
-                    onClick={handleAddToCart} type="button"
-                    >
-                    Adicionar ao carrinho
-                  </button> 
-                  </div>
-                ) : (
-                  <button className="store__disable-button" disabled>
-                    Produto Esgotado
-                  </button>
-                )} 
-                <span></span>
-                <StoreSocialMedia />
-              </article>
-            </> 
+                <article className="product-content__description">
+                    <div className="product-content__description--details">
+                        <h1 className="product-content__details--title">
+                          {product.name}
+                        </h1>
+                        <h2 className="product-content__details--price">
+                            R$ {product.price}
+                        </h2>
+                    </div> 
+                    <span></span> 
+                    <p className="product-content__description--text">
+                      {product.description}
+                    </p>
+                    {product.countInStock > 0 ? (
+                      <div className="product-content__description--container">
+                          <form className="product-content__description--form" value={qty} onChange={(e)=> setQty(e.target.value)}>
+                              <select className="product-content__form--select">
+                                  <option value="Selecione">Selecione</option> 
+                                  {allProductInStock.map(q => (
+                                  <option key={q + 1} value={q + 1}>{q + 1}</option>       
+                                  ))} 
+                              </select>
+                          </form> 
+                          <button className="store__button-one" onClick={handleAddToCart} type="button">
+                            Adicionar ao carrinho
+                          </button> 
+                      </div>
+                    ) : (
+                      <button className="store__disable-button" disabled>
+                        Produto Esgotado
+                      </button>
+                    )} 
+                  <span></span>
+                    <StoreSocialMedia />
+                </article>
+             </div> 
             )}
           </div>
        </div>

@@ -53,14 +53,14 @@
   gap: 30px;
 }
 
-.store__navbar--links a {
+.store__links--item {
   font-size: 1rem;
   position: relative;
   cursor: pointer;
   color: var(--black-color);
 }
 
-.store__navbar--links a::after {
+.store__links--item::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -72,7 +72,7 @@
   transition: var(--transition);
 }
 
-.store__navbar--links a:hover::after {
+.store__links--item:hover::after {
   opacity: 1;
 }
 

@@ -83,11 +83,10 @@ img {
   --transition: all 0.3s ease;
 }
 
-.store_minheight--positon {
+.store_minheight--position {
   position: relative;
   top: 0px;
-  min-height: 74vh; 
-  margin: 70px auto 20px; 
+  min-height: calc(100vh - 347px); 
 }
 
 
