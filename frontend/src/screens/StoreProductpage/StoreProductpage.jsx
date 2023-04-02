@@ -3,10 +3,11 @@ import { Link, useParams, useNavigate  } from "react-router-dom";
 import { useDispatch, useSelector }  from 'react-redux';
 import { listProductDetails } from "../../actions/productActions"; 
 import StoreSocialMedia from "../../components/common/StoreSocialMedia";
-import exit from "../../assets/icons/exit-icon.svg";
+
 import "./store_productpage.css";
 import StoreLoader from "../../components/StoreMessages/StoreLoader";
 import StoreMessage from "../../components/StoreMessages/StoreMessage";
+import StoreGoback from "../../components/common/StoreGoback/StoreGoback";
 
 
 
@@ -37,11 +38,8 @@ const StoreProductpage = () => {
   return (
     <main className="store__container">
        <div className="product-details store_minheight--positon">
-          <Link className="product-details__goback" to={"/"}>
-              <img src={exit} alt="Sair" />
-              Voltar
-          </Link>
-
+         <StoreGoback/> 
+         
           <div className="product-details__wrapper">
             {loading ? (<StoreLoader/>) : 
               error ? ( <StoreMessage variant={'danger'}>{error}</StoreMessage>

@@ -1,9 +1,8 @@
-.store__main-banner {
-  position: relative;
-  /* top: 60px; */
+.banner {
+  position: relative; 
 }
 
-.store__main-banner::after {
+.banner::after {
   position: absolute;
   content: "";
   height: 100%;
@@ -19,13 +18,13 @@
   left: 0;
 }
 
-.store__main-banner img {
+.banner__image {
   width: 100%;
   min-height: 350px;
   object-fit: cover;
 }
 
-.store__main-banner--title {
+.banner__banner--title {
   position: absolute;
   display: flex;
   align-items: center;
@@ -37,23 +36,23 @@
   height: 100%;
 }
 
-.store__main-banner--title h1 {
+.banner__title--text {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 2.3rem;
   line-height: 40px;
 }
 
-.store__main-banner--title .store__container {
+.banner__banner--title .banner__title--container {
   text-align: center;
 }
 
-.store__main-banner--title .store__button-one {
+.banner__banner--title .store__button-one {
   color: var(--black-color);
   background-color: transparent;
 }
 
-.store__main-banner--title .store__button-one:hover {
+.banner__banner--title .store__button-one:hover {
   background-color: var(--black-color);
   color: var(--white-color);
 }

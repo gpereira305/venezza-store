@@ -8,6 +8,7 @@ import { addToCart } from '../../actions/cartActions';
 import './store_cartpage.css';
 
 import placeholder from '../../assets/images/products/product-12.jpg'
+import StoreGoback from '../../components/common/StoreGoback/StoreGoback';
 
 const StoreCartpage = ( ) => {
   const params = useParams();  
@@ -18,9 +19,7 @@ const StoreCartpage = ( ) => {
   const qty = location.search ? +location.search.split('=')[1] : 1;
 
   const cart = useSelector(state => state.cart);
-  const { cartItems } = cart;
- 
-  console.log(cartItems)
+  const { cartItems } = cart; 
 
   useEffect(() => {
      if(productId) {
@@ -31,29 +30,36 @@ const StoreCartpage = ( ) => {
 
   return (
     <main className="store__container">
-      <div className="store__product-cart store_minheight--position">   
-               <Link className="store__product-details--goback" to={"/"}>
-                    <img src={exit} alt="Sair" />
-                    Voltar
-               </Link> 
+      <div className="cart store_minheight--position">  
+        <StoreGoback/>  
 
-          <ul style={{display: 'flex', flexDirection: 'column'}}>
+          <ul className='cart__product-list'>
                {!cartItems.length ?  (
-               <div className='store__empty-cart'>
-                    <h1 className='store__empty-cart--title'>Seu carrinho está vazio...</h1>
-               </div>
+                    <div className='store__empty-cart'>
+                         <h1 className='store__empty-cart--title'>Seu carrinho está vazio...</h1>
+                    </div>
                ) :cartItems.map((item) => (
-               <li key={item.id} style={{display: 'flex',justifyContent:'space-between', alignItems: 'flex-start', marginBottom: '10px', paddingBottom: '10px', borderBottom: '1px solid tomato' }}>
-                    <div style={{display: 'flex', gap: '20px'}}>
-                         <img src={item.image} alt={item.name} title={item.name} style={{maxWidth: '100px'}}/>
-                         <div>
-                         <h2>{item.name}</h2>
-                         <p>Cor: Cinza escuro</p>
-                         <p>Tam: M</p>
-                         <p>Preço: R$ {item.price} à vista</p>
+               <li className='cart__product-list--item' key={item.name}>
+                    <div className='cart__item--wrapper'>
+                         <img className='cart__item--product-img' 
+                            src={item.image} 
+                            alt={item.name} 
+                            title={item.name}
+                         />
+                         <div className='cart__item--description'>
+                              <h2 className='cart__description'>
+                                   {item.name}
+                              </h2> 
+                              <p className='cart__description'>
+                                   Preço: <span>R$ {item.price} à vista</span>
+                              </p>
                          </div>
                     </div> 
-                    <img src={trash} alt="Deletar" title='Deletar esse item'/> 
+                    <img className='cart__item--delete' 
+                       src={trash} 
+                       alt="Deletar" 
+                       title='Deletar esse item'
+                    /> 
                </li>  
                ))}
           </ul> 

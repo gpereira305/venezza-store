@@ -29,10 +29,7 @@ const StoreHeader = ({id}) => {
 
   const toggleCartOffcanvas = () => {
     return  setCartActive(!cartActive); 
-  };   
-   
-  console.log(`/product/${id}`)
-
+  };    
 
   return (
     <header className="store__header">
@@ -50,10 +47,10 @@ const StoreHeader = ({id}) => {
                   <a className="store__links--item"  href="/#sale">Promoções</a>
                </>
               )}
-              {pathname === `/cart/${id}` && (
+              {pathname === '/cart/undefined' && (
                 <small className="store__links--item">Carrinho</small>
               )}
-              {pathname === '/product' && (
+              {pathname === '/product/undefined' && (
                 <small className="store__links--item">Detalhe do produto</small>
               )}
             </div>

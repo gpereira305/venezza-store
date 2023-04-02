@@ -4,15 +4,15 @@ import StoreButtonOne from "../common/StoreButtons/StoreButtonOne";
 
 const index = () => {
   return (
-    <div className="store__main-banner">
-      <img src={mainBanner} alt="banner" />
-      <div className="store__main-banner--title">
-        <span className="store__container">
-          <h1>Nova Coleção de verão</h1>
-          <StoreButtonOne title="Coleção verão" />
-        </span>
-      </div>
-    </div>
+    <figure className="banner">
+        <img className="banner__image" src={mainBanner} alt="banner" />
+        <div className="banner__banner--title">
+            <div className="banner__title--container">
+                <h1 className="banner__title--text">Nova Coleção de verão</h1>
+                <StoreButtonOne title="Coleção verão" />
+            </div>
+        </div>
+    </figure>
   );
 };
 
