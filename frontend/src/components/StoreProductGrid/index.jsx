@@ -7,21 +7,21 @@ import StoreSections from "../common/StoreSections";
 import StoreLoader from "../StoreMessages/StoreLoader";
 import StoreMessage from "../StoreMessages/StoreMessage";
 
-const StoreProductGrid = ({ products, loading, error }) => { 
+const StoreProductGrid = ({ products, loading, error }) => {
   return (
-    <section className="store__grid-container" id="new-collection">
-      <StoreSections title="Nova Coleção" subtitle="Novidades" /> 
+    <section className="grid-container" id="new-collection">
+      <StoreSections title="Nova Coleção" subtitle="Novidades" />
         <div className="store__grid store__container">
           {loading ? (
           <>
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
           </>
           ): error ? (
             <StoreMessage>{error}</StoreMessage>
@@ -36,8 +36,8 @@ const StoreProductGrid = ({ products, loading, error }) => {
                 />
               ))}
            </>
-          )} 
-        </div> 
+          )}
+        </div>
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"; 
+import React, { useEffect } from "react";
 import {useDispatch, useSelector} from 'react-redux';
 import StoreBanner from "../../components/StoreBanner";
 import StoreProductGrid from "../../components/StoreProductGrid";
@@ -8,7 +8,7 @@ import StoreBlog from "../../components/StoreBlog";
 import StoreAdvantages from "../../components/StoreAdvantages";
 import StoreBackground from "../../components/StoreBackground";
 import StoreGoTop from "../../components/common/StoreGoTop";
-import { listProducts } from '../../actions/productActions' 
+import { listProducts } from '../../actions/productActions'
 
 import "./store_homepage.css";
 
@@ -25,7 +25,7 @@ const StoreHomepage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
- 
+
 
   return (
     <main>

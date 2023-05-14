@@ -6,64 +6,88 @@ import exit from "../../assets/icons/exit-icon.svg";
 import trash from "../../assets/icons/trash.svg";
 import { addToCart } from '../../actions/cartActions';
 import './store_cartpage.css';
-
-import placeholder from '../../assets/images/products/product-12.jpg'
 import StoreGoback from '../../components/common/StoreGoback/StoreGoback';
+import StoreGoTop from '../../components/common/StoreGoTop';
 
 const StoreCartpage = ( ) => {
-  const params = useParams();  
+  const params = useParams();
   let location = useLocation();
   const dispatch = useDispatch();
 
   const productId = params.id;
   const qty = location.search ? +location.search.split('=')[1] : 1;
-
   const cart = useSelector(state => state.cart);
-  const { cartItems } = cart; 
+  const { cartItems } = cart;
 
   useEffect(() => {
      if(productId) {
       dispatch(addToCart(productId, qty))
      }
-  }, [dispatch, productId, qty]) 
+  }, [dispatch, productId, qty]);
+
+    // manter a navegação no topo ao trocar de página
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleRemoveFromCart = (id) => {
+     console.log('remove!!!')
+  }
 
 
   return (
     <main className="store__container">
-      <div className="cart store_minheight--position">  
-        <StoreGoback/>  
+      <div className="cart store_minheight--position">
+        <StoreGoback/>
 
-          <ul className='cart__product-list'>
+          <ul className='cart-list'>
                {!cartItems.length ?  (
-                    <div className='store__empty-cart'>
-                         <h1 className='store__empty-cart--title'>Seu carrinho está vazio...</h1>
-                    </div>
+                  <div className='cart-list__empty-cart'>
+                     <h1 className='cart-list__empty-title'>
+                        Seu carrinho está vazio...
+                     </h1>
+                  </div>
                ) :cartItems.map((item) => (
-               <li className='cart__product-list--item' key={item.name}>
-                    <div className='cart__item--wrapper'>
-                         <img className='cart__item--product-img' 
-                            src={item.image} 
-                            alt={item.name} 
+               <li className='cart-items' key={item.name}>
+                    <div className='items-wrapper'>
+                         <img className='cart-items__product-img'
+                            src={item.image}
+                            alt={item.name}
                             title={item.name}
                          />
-                         <div className='cart__item--description'>
-                              <h2 className='cart__description'>
-                                   {item.name}
-                              </h2> 
-                              <p className='cart__description'>
-                                   Preço: <span>R$ {item.price} à vista</span>
-                              </p>
+                         <div className='user-actions'>
+                              <div className='user-actions__details'>
+                                 <Link className='user-actions__details-name' to= {`/product/${item.product}`}>
+                                    {item.name}
+                                 </Link>
+                                 <p className='user-actions__details-price'>
+                                    Preço: <span>R$ {item.price} à vista</span>
+                                 </p>
+                              </div>
+                              <form className="user-actions__form" value={qty} onChange={(e)=>
+                                 dispatch(addToCart(item.product, Number(e.target.value)))}>
+                                 <select className="user-actions__form-select">
+                                    <option value="Selecione">Selecione</option>
+                                    {[...Array(item.countInStock).keys()].map(q => (
+                                       <option key={q + 1} value={q + 1}>
+                                          {q + 1}
+                                       </option>
+                                    ))}
+                                 </select>
+                                 <img className='user-actions__form-delete'
+                                    onClick={handleRemoveFromCart}
+                                    src={trash}
+                                    alt="Deletar"
+                                    title='Deletar esse item'
+                                 />
+                              </form>
                          </div>
-                    </div> 
-                    <img className='cart__item--delete' 
-                       src={trash} 
-                       alt="Deletar" 
-                       title='Deletar esse item'
-                    /> 
-               </li>  
+                    </div>
+               </li>
                ))}
-          </ul> 
+          </ul>
       </div>
+      <StoreGoTop />
     </main>
   )
 }

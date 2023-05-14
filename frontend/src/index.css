@@ -86,7 +86,7 @@ img {
 .store_minheight--position {
   position: relative;
   top: 0px;
-  min-height: calc(100vh - 347px); 
+  min-height: calc(100vh - 347px);
 }
 
 
@@ -115,7 +115,7 @@ img {
 /*
 * ----------------------
 *    breakpoints
-* ---------------------- 
+* ----------------------
 */
 @media (max-width: 1240px) {
   .store__container {

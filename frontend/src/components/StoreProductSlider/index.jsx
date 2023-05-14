@@ -10,9 +10,9 @@ import "swiper/css/bundle";
 import StoreLoader from "../StoreMessages/StoreLoader";
 import StoreMessage from "../StoreMessages/StoreMessage";
 
-const StoreProductSlider = ({ products, loading, error  }) => { 
+const StoreProductSlider = ({ products, loading, error  }) => {
 
- 
+
 
   return (
     <section className="store__grid-container" id="sale">
@@ -24,10 +24,10 @@ const StoreProductSlider = ({ products, loading, error  }) => {
       <div className="store__slider store__container">
         {loading ? (
           <div className="store__grid">
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
-            <StoreLoader/> 
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
+            <StoreLoader/>
           </div>
         ): error ? (
           <StoreMessage>{error}</StoreMessage>
@@ -46,7 +46,7 @@ const StoreProductSlider = ({ products, loading, error  }) => {
             640: { slidesPerView: 2, spaceBetween: 20},
             992: { slidesPerView: 3, spaceBetween: 30},
             1240:{ slidesPerView: 4, spaceBetween: 20},
-          }} 
+          }}
         >
           {products.map(
             (product) =>
@@ -59,7 +59,7 @@ const StoreProductSlider = ({ products, loading, error  }) => {
                   />
                 </SwiperSlide>
               )
-          )} 
+          )}
         </Swiper>
         )}
 
