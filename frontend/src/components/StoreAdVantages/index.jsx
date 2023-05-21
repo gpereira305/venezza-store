@@ -7,28 +7,43 @@ import "./store_advantages.css";
 
 const index = () => {
   return (
-    <div className="store__advantages">
-      <div className="store__advantages--container  ">
-        <div className="store__advantages--card-body">
-          <img src={truck} alt="Frete" />
-          <h2 className="store__card-body--title">Frete & retorno grátis</h2>
-          <p className="store__card-body--content">
-            Frete grátis para todo o país
-          </p>
+    <div className="buying-advantages">
+      <div className="buying-advantages__container">
+        <div className="content-block">
+            <img className="content-block__img"
+               src={truck} alt="Frete"
+               title="Frete"
+            />
+            <h2 className="content-block__title">
+               Frete & retorno grátis
+            </h2>
+            <p className="content-block__message">
+               Frete grátis para todo o país
+            </p>
         </div>
 
-        <div className="store__advantages--card-body">
-          <img src={dollarSign} alt="Frete" />
-          <h2 className="store__card-body--title">Compra garantida</h2>
-          <p className="store__card-body--content">30 dias de garantia</p>
+        <div className="content-block">
+            <img className="content-block__img"
+               src={dollarSign} alt="Garantia de compra"
+               title="Garantia de compra"
+            />
+            <h2 className="content-block__title">
+               Compra garantida
+            </h2>
+            <p className="content-block__message">
+               30 dias de garantia
+            </p>
         </div>
 
-        <div className="store__advantages--card-body">
-          <img src={phone} alt="Frete" />
-          <h2 className="store__card-body--title">Suporte online</h2>
-          <p className="store__card-body--content">
-            Todo o suporte disponível 24h
-          </p>
+        <div className="content-block">
+            <img className="content-block__img"
+               src={phone} alt="Suporte online"
+               title="Suporte online"
+            />
+            <h2 className="content-block__title">Suporte online</h2>
+            <p className="content-block__message">
+               Todo o suporte disponível 24h
+            </p>
         </div>
       </div>
     </div>

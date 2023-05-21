@@ -4,11 +4,13 @@ import "./store_background.css";
 
 const index = () => {
   return (
-    <div className="store__background">
-      <div className="store__background--cta">
-        <h2>Promoções todos os dias!</h2>
-        <StoreButtonOne title={"confira"} />
-      </div>
+    <div className="promo-background">
+         <div className="promo-background__message">
+            <h2 className="promo-background__message--content">
+               Promoções todos os dias!
+            </h2>
+            <StoreButtonOne title={"confira"} />
+         </div>
     </div>
   );
 };

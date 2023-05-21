@@ -8,9 +8,9 @@ import "./store_usercomments.css";
 
 const index = () => {
   return (
-    <div className="store__users-comment store__container">
+    <div className="users-comments store__container">
       <StoreSections title="O que dizem sobre nós" subtitle="Depoimentos" />
-      <div className="store__users-comment--body">
+      <div className="comments-slider">
         <Swiper
           spaceBetween={0}
           slidesPerView={1}
@@ -32,19 +32,22 @@ const index = () => {
         >
           {comments.map((comment, i) => (
             <SwiperSlide key={i}>
-              <article className="store__body--block">
-                <img
-                  src={comment.userImg}
-                  alt={comment.name}
-                  title={comment.name}
-                />
-                <span>{comment.stars}</span>
-                <blockquote className="store__block--quotation">
-                  <q>{comment.quote}</q>
-                </blockquote>
-                <p className="store__block--user-name">
-                  {comment.name} - <small>{comment.date}</small>
-                </p>
+              <article className="user-comment">
+                  <img
+                     className="user-comment__img"
+                     src={comment.userImg}
+                     alt={comment.name}
+                     title={comment.name}
+                  />
+                  <span className="user-comment__rating">
+                      {comment.stars}
+                  </span>
+                  <blockquote className="user-comment__content">
+                     <q>{comment.quote}</q>
+                  </blockquote>
+                  <p className="user-comment__data">
+                     {comment.name} - <small>{comment.date}</small>
+                  </p>
               </article>
             </SwiperSlide>
           ))}

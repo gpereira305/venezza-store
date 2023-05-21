@@ -1,4 +1,4 @@
-.store__gotop-button {
+.gotop-button {
   position: fixed;
   right: -100px;
   bottom: 30px;
@@ -17,13 +17,11 @@
   border-radius: 1px;
   opacity: 0;
 }
-
-.store__gotop-button--active {
+.gotop-button__active {
   right: 10px;
   opacity: 1;
 }
-
-.store__gotop-button--item {
+.gotop-button__item {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 16px;

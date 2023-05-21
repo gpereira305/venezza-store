@@ -10,18 +10,30 @@ const index = ({
   id,
 }) => {
   return (
-    <article className="store__grid--item">
+    <article className="product-card">
       {productPrice < 20 && <span>Promoção</span>}
-      <small className="store__grid--price">R$ {productPrice}</small>
-      <img className="store__item--img" src={productImage} alt="" />
-      <p className="store__item--title">{productName}</p>
+      <small className="product-card__price">R$ {productPrice}</small>
+      <img className="product-card__img"
+         src={productImage}
+         alt={productName}
+         title={productName}
+      />
+      <p className="product-card__title">
+        {productName}
+      </p>
 
-      <div className="store__item--icons">
-        <Link to={`/cart/${id}`}>
-          <img src={bagIcon} alt="Sacola" title="Carrinho" />
+      <div className="product-card__icons">
+        <Link className="product-card__icons-link" to={`/cart/${id}`}>
+          <img className="product-card__icons-item"
+             src={bagIcon} alt="Sacola"
+             title="Carrinho"
+          />
         </Link>
-        <Link to={`/product/${id}`}>
-          <img src={eyeIcon} alt="olho" title="Espiar" />
+        <Link className="product-card__icons-link" to={`/product/${id}`}>
+          <img className="product-card__icons-item"
+             src={eyeIcon} alt="olho"
+             title="Espiar"
+          />
         </Link>
       </div>
     </article>

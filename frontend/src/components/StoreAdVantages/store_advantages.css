@@ -1,9 +1,8 @@
-.store__advantages {
+.buying-advantages {
   background-color: var(--black-color);
   padding: 25px 0;
 }
-
-.store__advantages--container {
+.buying-advantages__container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -13,25 +12,22 @@
   min-height: 200px;
   align-items: center;
 }
-
-.store__advantages--card-body {
+.content-block {
   color: var(--white-color);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.store__advantages--card-body img {
+.content-block__img {
   margin-bottom: 5px;
   width: 40px;
 }
-
-.store__card-body--title {
+.content-block__title {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.2rem;
 }
-.store__card-body--content {
+.content-block__message {
   font-weight: 300;
   font-size: 0.8rem;
 }
@@ -39,28 +35,26 @@
 /*
 * ----------------------
 *    breakpoints
-* ---------------------- 
+* ----------------------
 */
 @media (max-width: 992px) {
-  .store__card-body--title {
+  .content-block__title {
     font-size: 1rem;
   }
 
-  .store__advantages--container {
+  .buying-advantages__container {
     max-width: 660px;
     padding: 0 20px;
   }
 }
-
 @media (max-width: 768px) {
-  .store__advantages--container {
+  .buying-advantages__container {
     flex-wrap: wrap;
     gap: 40px;
   }
 }
-
 @media (max-width: 460px) {
-  .store__advantages--container {
+  .buying-advantages__container {
     justify-content: center;
   }
 }

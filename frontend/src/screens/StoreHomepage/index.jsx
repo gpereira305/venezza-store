@@ -21,7 +21,6 @@ const StoreHomepage = () => {
     dispatch(listProducts())
   }, [dispatch]);
 
-  // manter a navegação no topo ao trocar de página
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

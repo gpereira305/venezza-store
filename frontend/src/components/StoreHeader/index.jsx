@@ -1,35 +1,32 @@
-import React, { useEffect, useState } from "react"; 
-import { Link, useLocation  } from "react-router-dom"; 
+import React, { useEffect, useState } from "react";
+import { Link, useLocation  } from "react-router-dom";
 import "./store_header.css";
 import shoppingBag from "../../assets/icons/shop-bag.svg";
 import user from "../../assets/icons/user.svg";
-import close from "../../assets/icons/close.svg"; 
+import close from "../../assets/icons/close.svg";
 
 const StoreHeader = ({id}) => {
   const [small, setSmall] = useState(false);
-  const [cartActive, setCartActive] = useState(false);   
-  
-  const { pathname } = useLocation(); 
+  const [cartActive, setCartActive] = useState(false);
 
-  useEffect(() => { 
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setSmall(window.pageYOffset > 60)
-      );
-    }
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined")
+      window.onscroll = () => setSmall(window.pageYOffset > 10);
   }, []);
 
-    useEffect(() => {
+   useEffect(() => {
       if (cartActive) {
         document.body.style.overflow = "hidden";
       } else {
-        document.body.style.overflow = "unset";
+        document.body.style.overflow = "auto";
       }
-  }, [cartActive]); 
+  }, [cartActive]);
 
   const toggleCartOffcanvas = () => {
-    return  setCartActive(!cartActive); 
-  };    
+    return  setCartActive(!cartActive);
+  };
 
   return (
     <header className="store__header">
@@ -55,16 +52,19 @@ const StoreHeader = ({id}) => {
               )}
             </div>
             <span className="store__navbar--overlay"></span>
-            <div className="store__navbar--user"> 
-              <img className="store__user--login" onClick={toggleCartOffcanvas} src={user} alt="usuário" title="Usuário" />
+            <div className="store__navbar--user">
+              <img className="store__user--login" src={user} alt="usuário" title="Usuário" />
               <Link to={`/cart/${id}`}>
-                 <img className="store__user--bag" src={shoppingBag} alt="Sacola" title="Sacola"/> 
+                 <img className="store__user--bag"
+                    src={shoppingBag} alt="Sacola"
+                    title="Sacola" onClick={toggleCartOffcanvas}
+                  />
               </Link>
             </div>
-          </div> 
+          </div>
         </div>
       </nav>
-      
+
       {/* cart / user links */}
       <div className={`store__header--overlay ${cartActive ? "offcanvas-active" : "store__header--overlay"}`} onClick={toggleCartOffcanvas}></div>
       <div className={`store__header--cart ${cartActive ? "offcanvas-active" : "store__header--cart"}`}>
@@ -72,12 +72,12 @@ const StoreHeader = ({id}) => {
               <img onClick={toggleCartOffcanvas} src={close} alt="Fechar" title="Fechar Carrinho"/>
               <h1 className="store__header--title">Seu Carrinho</h1>
               <span></span>
-          </div> 
+          </div>
 
-            <div> 
+            <div>
                <h3>menu</h3>
-            </div> 
-      </div>  
+            </div>
+      </div>
     </header>
   );
 };

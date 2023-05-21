@@ -1,4 +1,4 @@
-.store__background {
+.promo-background {
   background-image: url("../../assets/images/parallax-image.jpg");
   position: relative;
   height: 500px;
@@ -7,8 +7,7 @@
   background-attachment: fixed;
   background-size: cover;
 }
-
-.store__background::after {
+.promo-background::after {
   content: "";
   position: absolute;
   left: 0;
@@ -17,8 +16,7 @@
   bottom: 0;
   background-color: rgba(0 0 0 / 50%);
 }
-
-.store__background--cta {
+.promo-background__message {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -27,8 +25,7 @@
   bottom: 45%;
   z-index: 10;
 }
-
-.store__background--cta h2 {
+.promo-background__message--content {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: 400;
@@ -36,14 +33,12 @@
   color: var(--white-color);
   line-height: 40px;
 }
-
-.store__background--cta .store__button-one {
+.promo-background__message .store__button-one {
   background-color: transparent;
   border: 2px solid var(--white-color);
   color: var(--white-color);
 }
-
-.store__background--cta .store__button-one:hover {
+.promo-background__message .store__button-one:hover {
   background-color: var(--white-color);
   color: var(--black-color);
 }

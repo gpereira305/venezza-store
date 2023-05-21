@@ -11,7 +11,7 @@ const StoreProductGrid = ({ products, loading, error }) => {
   return (
     <section className="grid-container" id="new-collection">
       <StoreSections title="Nova Coleção" subtitle="Novidades" />
-        <div className="store__grid store__container">
+        <div className="product-grid store__container">
           {loading ? (
           <>
             <StoreLoader/>
